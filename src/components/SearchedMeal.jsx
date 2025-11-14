@@ -13,6 +13,8 @@ const MealBySearch = ({ region }) => {
         `https://www.themealdb.com/api/json/v1/1/filter.php?a=${region}`
       );
       const data = await res.json();
+      console.log(data);
+      
       setSearchedMeals(data.meals);
     } catch (error) {
       console.log(error);
