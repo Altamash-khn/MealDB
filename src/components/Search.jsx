@@ -99,26 +99,6 @@ const SearchComponent = ({ setSearchRegion }) => {
                   </li>
                 ))}
           </ul>
-          {/* <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-            {loading
-              ? Array.from({ length: 20 }).map((_, index) => (
-                  <li
-                    key={index}
-                    className="bg-orange-200 text-orange-800 w-full h-6 sm:h-8 rounded-full shadow animate-pulse"
-                  ></li>
-                ))
-              : cuisines.map((cuisine, index) => (
-                  <li
-                    key={index}
-                    className="w-full text-center bg-orange-100 text-orange-800 px-3 py-1 
-                     text-sm sm:text-base rounded-full cursor-pointer 
-                     hover:bg-orange-800 hover:text-orange-50 transition"
-                    onClick={() => setInputValue(cuisine.strArea)}
-                  >
-                    {cuisine.strArea}
-                  </li>
-                ))}
-          </ul> */}
         </div>
       </section>
     </>

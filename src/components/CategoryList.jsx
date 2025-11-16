@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
 import RecipeCard from "./CategoryCard";
+import { Link } from "react-router-dom";
 
 const CategoryList = () => {
   const [categories, setCateogries] = useState([]);
@@ -62,13 +63,15 @@ const CategoryList = () => {
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
         {filterCategories.map((item, index) => {
           return (
-            <li key={index}>
-              <RecipeCard
-                title={item.strCategory}
-                img={item.strCategoryThumb}
-                desc={item.strCategoryDescription}
-              />
-            </li>
+            <Link to={`/category/${item.strCategory}`} key={index}>
+              <li key={index}>
+                <RecipeCard
+                  title={item.strCategory}
+                  img={item.strCategoryThumb}
+                  desc={item.strCategoryDescription}
+                />
+              </li>
+            </Link>
           );
         })}
       </ul>

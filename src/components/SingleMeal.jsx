@@ -1,19 +1,22 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import BackButton from "./BackButton";
 import { useEffect, useState } from "react";
 
 const SingleMeal = () => {
   const location = useLocation();
+  console.log('location', location);
   const [expanded, setExpanded] = useState(false);
   const [loading, setLoading] = useState(true);
   const [meal, setMeal] = useState({});
   const [imageLoaded, setImageLoaded] = useState(false);
   let ingredientsArr = [];
-  const data = location.state;
-  console.log(data);
+  const data = location.state || useParams().meal;
+  
 
   async function fetchMeal() {
+    console.log("fetchMeal");
     if (data.idMeal) {
+      console.log("uif data.id₹meal", data);
       setMeal(data);
     } else {
       const res = await fetch(
