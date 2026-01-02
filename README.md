@@ -29,6 +29,7 @@ Visit the project here: **https://meal-db-livid-nine.vercel.app/**
 
 - **React.js** – Frontend library for building the UI
 - **Tailwind CSS** – Utility-first CSS framework for styling
+- **shadcn ui** – reusable cards
 - **Lucide React** – Icon library for React
 - **React Router DOM** – Routing and navigation
 - **ReactDOM** – DOM rendering engine for React
